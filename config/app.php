@@ -169,6 +169,7 @@ return [
         \App\Bootstrap\Infrastructure\Providers\EventServiceProvider::class,
         \App\Bootstrap\Infrastructure\Providers\RouteServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
     ])->toArray(),
 
     /*
