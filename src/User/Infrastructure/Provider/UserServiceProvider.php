@@ -4,7 +4,6 @@ namespace App\User\Infrastructure\Provider;
 
 use App\User\Data\Repository\EloquentUserRepository;
 use App\User\Domain\Repository\UserRepository;
-use Closure;
 use Illuminate\Support\ServiceProvider;
 
 class UserServiceProvider extends ServiceProvider
