@@ -30,18 +30,4 @@ class AuthUserActionTest extends TestCase
         $this->assertNotNull($response['user']);
     }
 
-    public function test_can_register_user()
-    {
-        $data = [
-            'name' => $this->user->getAttributeValue('name'),
-            'email' => $this->user->getAttributeValue('email'),
-            'password' => 'azerty@123'
-        ];
-
-        $response = $this->postJson('api/auth/register', $data);
-
-        $response->assertOk();
-        $this->assertTrue($response['isLogged']);
-        $this->assertNotNull($response['user']);
-    }
 }

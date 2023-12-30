@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Auth\Domain\Services;
+namespace App\Auth\Infrastructure\Services;
 
 use App\Auth\Presentation\Http\Requests\LoginRequest;
 use App\Auth\Presentation\Responses\LoginResponse;
