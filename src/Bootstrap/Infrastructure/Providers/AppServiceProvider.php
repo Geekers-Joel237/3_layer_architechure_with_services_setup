@@ -2,6 +2,7 @@
 
 namespace App\Bootstrap\Infrastructure\Providers;
 
+use App\Auth\Infrastructure\Provider\UserAuthServiceProvider;
 use App\User\Infrastructure\Provider\UserServiceProvider;
 use Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider;
 use Illuminate\Support\ServiceProvider;
@@ -31,5 +32,6 @@ class AppServiceProvider extends ServiceProvider
     private function registerServiceProviders(): void
     {
         $this->app->register(UserServiceProvider::class);
+        $this->app->register(UserAuthServiceProvider::class);
     }
 }

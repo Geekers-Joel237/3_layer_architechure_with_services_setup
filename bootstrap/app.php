@@ -15,6 +15,7 @@ $app = new Illuminate\Foundation\Application(
     $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
 );
 
+$app->useAppPath(base_path() . '/src');
 /*
 |--------------------------------------------------------------------------
 | Bind Important Interfaces

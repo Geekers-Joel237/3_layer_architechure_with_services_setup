@@ -5,7 +5,7 @@ namespace App\Auth\Infrastructure\Provider;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
-class AuthServiceProvider extends ServiceProvider
+class UserAuthServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
@@ -21,7 +21,7 @@ class AuthServiceProvider extends ServiceProvider
     private function registerRoutes(): void
     {
         Route::group($this->routeConfig(), function () {
-            $this->loadRoutesFrom(base_path('/src/Auth/Infrastructure/database/routes/api.php'));
+            $this->loadRoutesFrom(base_path('/src/Auth/Infrastructure/routes/api.php'));
         });
 
     }
@@ -29,7 +29,7 @@ class AuthServiceProvider extends ServiceProvider
     private function routeConfig(): array
     {
         return [
-            'prefix' => 'auth',
+            'prefix' => 'api/auth',
             'middleware' => 'guest'
         ];
     }
