@@ -2,7 +2,7 @@
 
 namespace App\Auth\Presentation\Http\Controllers;
 
-use App\Auth\Infrastructure\Services\AuthUserService;
+use App\Auth\Data\Services\AuthUserService;
 use App\Auth\Presentation\Http\Requests\LoginRequest;
 use Exception;
 use Illuminate\Http\JsonResponse;
